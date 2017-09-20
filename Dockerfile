@@ -40,5 +40,5 @@ RUN wget https://github.com/meyskens/x-www-browser-forward/releases/download/0.0
 
 USER user
 
-ENTRYPOINT ["/usr/lib/slack/slack"]
+ENTRYPOINT ["/usr/bin/slack"]
 
