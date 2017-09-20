@@ -26,7 +26,7 @@ RUN apt-get update && apt-get -y install \
 	libx11-xcb1 \
 	--no-install-recommends 
 
-RUN wget wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.7.1-amd64.deb &&\
+RUN wget https://downloads.slack-edge.com/linux_releases/slack-desktop-2.7.1-amd64.deb &&\
 	dpkg -i slack-desktop-2.7.1-amd64.deb || apt-get -f -y install &&\
 	rm -f slack-desktop-2.7.1-amd64.deb
 
