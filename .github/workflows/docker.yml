@@ -16,6 +16,7 @@ jobs:
       run: echo docker login docker.pkg.github.com -u "${GITHUB_ACTOR}" --password-stdin
     - name: Log in to registry
       run: echo $GITHUB_TOKEN | docker login docker.pkg.github.com -u "${GITHUB_ACTOR}" --password-stdin
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     - name: Push image
       run: docker push docker.pkg.github.com/meyskens/docker-slack/slack:latest
