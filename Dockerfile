@@ -36,6 +36,8 @@ RUN wget https://github.com/meyskens/x-www-browser-forward/releases/download/0.0
 	mv client /usr/bin/x-www-browser && \
 	chmod +x  /usr/bin/x-www-browser
 
+RUN apt-get update && apt-get install -y hicolor-icon-theme
+
 USER user
 
 ENTRYPOINT ["/usr/bin/slack"]
